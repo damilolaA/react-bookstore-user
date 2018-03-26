@@ -136,6 +136,7 @@
   border: 1px solid #aaa;
   width: 54px;
   margin-right: 12px;
+  margin-left: 5px;
 }
 #bookpreview .display-book {
   background: url('../img/1.jpg');

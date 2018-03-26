@@ -32,10 +32,9 @@ class TopSelling extends Component {
 			topSelling = this.state.topSelling;
 		}
 
-		console.log(topSelling);
 		var style = {
-			background: 'url('+ topSelling.imagePath + ')',
-			backgroundSize: 'cover',
+			backgroundImage: 'url('+topSelling.imagePath+')',
+			backgroundSize: 'contain',
 			backgroundPosition: 'center',
 			backgroundRepeat: 'no-repeat'
 		};
@@ -50,7 +49,7 @@ class TopSelling extends Component {
 			        <h3 className="book-price">{topSelling.price}</h3>
 
 			        <form>
-			          <label htmlFor="book-amout">Amount</label>
+			          <label htmlFor="book-amount">Amount</label>
 			          <input type="number" className="book-amount text-field" />
 			          <input className="def-button add-to-cart" type="submit" name="" value="Add to cart" />
 			        </form>
