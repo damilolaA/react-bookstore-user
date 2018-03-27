@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import TopSellingDetails from './TopSelling-Details';
+import Loader from './Loader';
 
 class TopSelling extends Component {
 
 	constructor() {
 		super()
 		this.state = {
-			topSelling: ""
+			topSelling: "",
+			loading: true
 		}
 	}
 
@@ -17,7 +19,8 @@ class TopSelling extends Component {
 				var data = response.data;
 
 				this.setState({
-					topSelling: data
+					topSelling: data,
+					loading: false
 				})
 			})
 			.catch(err => {
@@ -27,9 +30,13 @@ class TopSelling extends Component {
 
 	render() {
 
+		if(this.state.loading) {
+			return <Loader />
+		}
+		
 		return (
 			<div className="main">
-				<TopSellingDetails topSelling={this.state.topSelling} />
+				<TopSellingDetails topSelling={this.state.topSelling} />;
 		    </div>
 		);
 	}

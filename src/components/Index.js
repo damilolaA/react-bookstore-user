@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import TopSelling from './TopSelling';
+import TrendingBooks from './TrendingBooks';
 
 class Index extends Component {
 
@@ -10,6 +11,7 @@ class Index extends Component {
 			<div>
 				<Header />
 				<TopSelling />
+				<TrendingBooks />
 				<Footer />
 			</div>
 		);
