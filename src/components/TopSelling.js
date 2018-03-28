@@ -35,7 +35,7 @@ class TopSelling extends Component {
 		}
 		
 		return (
-			<div className="main">
+			<div>
 				<TopSellingDetails topSelling={this.state.topSelling} />
 		    </div>
 		);

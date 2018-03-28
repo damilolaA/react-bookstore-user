@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import Header from './Header';
 import Footer from './Footer';
-import TopSelling from './TopSelling';
-import TrendingBooks from './TrendingBooks';
+import MainSection from './MainSection';
+
 
 class Index extends Component {
 
@@ -10,8 +10,7 @@ class Index extends Component {
 		return (
 			<div>
 				<Header />
-				<TopSelling />
-				<TrendingBooks />
+				<MainSection />
 				<Footer />
 			</div>
 		);
