@@ -7,16 +7,16 @@ class Trending extends Component {
 	constructor() {
 		super()
 		this.state = {
-			recentlyViewed: ""
+			trending: ""
 		}
 	}
 
 	componentDidMount() {
-		axios.get('https://bookstoreappapi.herokuapp.com/api/v1/books/recentlyViewed')
+		axios.get('https://bookstoreappapi.herokuapp.com/api/v1/books/getTrending')
 			.then(response => {
 				let books = response.data
 				this.setState({
-					recentlyViewed: books
+					trending: books
 				})
 			})
 			.catch(err => {
@@ -25,12 +25,12 @@ class Trending extends Component {
 	}
 
 	render() {
-		console.log(this.state.recentlyViewed);
+		console.log(this.state.trending);
 		return (
 			<div className="main">
-				<TrendingBooksList trendingBooks={this.state.recentlyViewed}/>
+				<TrendingBooksList trendingBooks={this.state.trending}/>
 			</div>
-		);
+		)
 	}
 }
 

@@ -3,7 +3,7 @@ import React from 'react';
 const Loader = () => {
 
 	let style = {
-		backgroundImage: "url('" + "../components/svg-loaders/audio.svg" + "') center no-repeat",
+		backgroundImage: 'url(" + "../components/svg-loaders/audio.svg" + ") center no-repeat',
 		backgroundSize: 'cover',
 		height: '100px',
 		width: '100px'
