@@ -1,20 +1,21 @@
-import React, { Component } from 'react';
-import Header from './Header';
-import Footer from './Footer';
+import React from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import MainSection from './MainSection';
+import BookPreview from './BookPreview';
 
 
-class Index extends Component {
+const Index = () => {
 
-	render() {
-		return (
-			<div>
-				<Header />
-				<MainSection />
-				<Footer />
-			</div>
-		);
-	}
+	return(
+	<BrowserRouter>
+		<div>
+			<Switch>
+				<Route exact path="/" component={MainSection} />
+				<Route path="/bookpreview/:id" component={BookPreview} />
+			</Switch>
+		</div>
+	</BrowserRouter>
+	);
 }
 
 export default Index;

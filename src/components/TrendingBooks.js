@@ -25,7 +25,7 @@ class Trending extends Component {
 	}
 
 	render() {
-		console.log(this.state.trending);
+		
 		return (
 			<div>
 				<BookList header="Trending" trendingBooks={this.state.trending}/>

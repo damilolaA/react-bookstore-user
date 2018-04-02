@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const TrendingBooksList = (props) => {
 
@@ -7,8 +8,8 @@ const TrendingBooksList = (props) => {
 	if(props.trendingBooks) {
 		props.trendingBooks.forEach(book => {
 			books.push(
-			 <li className="book">
-			 	<a href="">
+			 <li key={book._id} className="book">
+			 	<Link to={`/bookpreview/${book._id}`}>
 			 		<div className="book-cover" 
 			 			style={{
 			 				backgroundImage: 'url(' + book.imagePath + ')', 
@@ -17,8 +18,8 @@ const TrendingBooksList = (props) => {
 			 				backgroundRepeat: 'no-repeat'
 			 			}}>
 			 		</div>
-			 	</a>
-          		<div className="book-price"><p>{book.price}</p></div>
+			 		<div className="book-price"><p>{book.price}</p></div>
+			 	</Link>
 			 </li>
 			)
 		})

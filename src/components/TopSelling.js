@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import TopSellingDetails from './TopSelling-Details';
+import BookDetails from './BookDetails';
 import Loader from './Loader';
 
 class TopSelling extends Component {
@@ -36,7 +36,7 @@ class TopSelling extends Component {
 		
 		return (
 			<div>
-				<TopSellingDetails topSelling={this.state.topSelling} />
+				<BookDetails details={this.state.topSelling} />
 		    </div>
 		);
 	}
