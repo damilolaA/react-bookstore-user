@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import TrendingBookList from './TrendingBooksList';
+import BookList from './BookList';
 
 class RecentlyViewed extends Component {
 
@@ -26,7 +26,7 @@ class RecentlyViewed extends Component {
 	render() {
 		return (
 			<div>
-				<TrendingBookList  trendingBooks={this.state.recentlyViewed}/>
+				<BookList header="Recently Viewed" trendingBooks={this.state.recentlyViewed}/>
 			</div>
 		)
 	}

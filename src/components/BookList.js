@@ -26,7 +26,7 @@ const TrendingBooksList = (props) => {
 
 	return (	
 		<div className="trending-books horizontal-book-list">
-	      <h3 className="header">Trending</h3>
+	      <h3 className="header">{props.header}</h3>
 	      <ul className="book-list">
 	      	{books}
 	      </ul>

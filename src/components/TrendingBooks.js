@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import TrendingBooksList from './TrendingBooksList';
+import BookList from './BookList';
 
 class Trending extends Component {
 
@@ -28,7 +28,7 @@ class Trending extends Component {
 		console.log(this.state.trending);
 		return (
 			<div>
-				<TrendingBooksList trendingBooks={this.state.trending}/>
+				<BookList header="Trending" trendingBooks={this.state.trending}/>
 			</div>
 		)
 	}
