@@ -8,32 +8,6 @@ const BookReview = () => {
 	      <ul className="review-list">
 	        <li className="review">
 	          <div className="avatar-def user-image">
-	            <h4 className="user-init">jm</h4>
-	          </div>
-	          <div className="info">
-	            <h4 className="username">Jon Williams</h4>
-	            <p className="comment">
-	              Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-	              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-	            </p>
-	          </div>
-	        </li>
-	        <li className="review">
-	          <div className="avatar-def user-image">
-	            <h4 className="user-init">AE</h4>
-	          </div>
-	          <div className="info">
-	            <h4 className="username">Abby Essien</h4>
-	            <p className="comment">
-	              Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-	              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-	              Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-	              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-	            </p>
-	          </div>
-	        </li>
-	        <li className="review">
-	          <div className="avatar-def user-image">
 	            <h4 className="user-init">SB</h4>
 	          </div>
 	          <div className="info">
