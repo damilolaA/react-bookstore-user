@@ -3,6 +3,7 @@ import axios from 'axios';
 import Header from './Header';
 import Footer from './Footer';
 import BookDetails from './BookDetails';
+import BookReview from './BookReview';
 
 class BookPreview extends Component {
 
@@ -33,6 +34,7 @@ class BookPreview extends Component {
 			<div className="main">
 				<Header />
 				<BookDetails details={this.state.book}/>
+				<BookReview />
 				<Footer />
 			</div>
 		);
