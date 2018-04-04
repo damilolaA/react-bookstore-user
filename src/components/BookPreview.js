@@ -34,7 +34,7 @@ class BookPreview extends Component {
 			<div className="main">
 				<Header />
 				<BookDetails details={this.state.book}/>
-				<BookReview />
+				<BookReview bookData={this.state.book}/>
 				<Footer />
 			</div>
 		);

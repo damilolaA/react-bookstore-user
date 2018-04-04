@@ -1,7 +1,8 @@
 import React from 'react';
+import CommentForm from './CommentForm';
 
-const BookReview = () => {
-
+const BookReview = (props) => {
+	console.log(props.bookData);
 	return (
 		<div className="book-reviews">
 	      <h3 className="header">Reviews</h3>
@@ -21,13 +22,7 @@ const BookReview = () => {
 	          </div>
 	        </li>
 	      </ul>
-	      <div className="add-comment">
-	        <h3 className="header">Add your comment</h3>
-	        <form className="comment">
-	          <textarea className="text-field" placeholder="write something"></textarea>
-	          <button className="def-button post-comment">Upload comment</button>
-	        </form>
-	      </div>
+	      <CommentForm bookId={props.bookData._id} />
 	    </div>
 	)
 }

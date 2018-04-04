@@ -60,6 +60,11 @@ class UserLogin extends Component {
 		        data: userDetails
 		    })
 		    .then(response => {
+		    	let token = response.data._token,
+		    		userId = response.data._id;
+
+		    	localStorage.setItem("userId", userId);
+		    	localStorage.setItem("userToken", token);
 		    	this.setState({redirect: true});
 		    })
 		    .catch(err => {
