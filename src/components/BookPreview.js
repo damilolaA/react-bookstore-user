@@ -16,7 +16,7 @@ class BookPreview extends Component {
 
 	componentWillMount() {
 		let id = this.props.match.params.id;
-		console.log(id);
+		
 		axios.get(`https://bookstoreappapi.herokuapp.com/api/v1/books/${id}`)
 			.then(response => {
 				this.setState({

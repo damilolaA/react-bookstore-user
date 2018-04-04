@@ -2,7 +2,7 @@ import React from 'react';
 import CommentForm from './CommentForm';
 
 const BookReview = (props) => {
-	console.log(props.bookData);
+	
 	return (
 		<div className="book-reviews">
 	      <h3 className="header">Reviews</h3>
