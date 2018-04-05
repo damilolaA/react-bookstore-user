@@ -5,20 +5,25 @@ const BookReview = (props) => {
 
 
 		let commentsArray = props.bookData.comments,
+			userName = localStorage.getItem('name'),
+			info = userName.split(" "),
+			initials = "",
 			comments = [];
-
-		console.log(commentsArray);
 		
+		for(var i = 0; i < info.length; i++) {
+			initials += info[i].substring(0, 1);
+		}
+
 		if(commentsArray) {
 			commentsArray.forEach(comment => {
 				console.log(comment);
 				comments.push(
-					<li className="review">
+					<li key={comment._id} className="review">
 			          <div className="avatar-def user-image">
-			            <h4 className="user-init">SB</h4>
+			            <h4 className="user-init">{initials}</h4>
 			          </div>
 			          <div className="info">
-			            <h4 className="username">Sandra Bullock</h4>
+			            <h4 className="username">{userName ? userName : ""}</h4>
 			            <p className="comment">
 			              {comment.comment}
 			            </p>

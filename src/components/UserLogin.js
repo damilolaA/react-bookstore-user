@@ -60,11 +60,17 @@ class UserLogin extends Component {
 		        data: userDetails
 		    })
 		    .then(response => {
+		    	console.log(response);
 		    	let token = response.data._token,
-		    		userId = response.data._id;
+		    		userId = response.data._id,
+		    		firstName = response.data.firstName,
+		    		lastName = response.data.lastName,
+		    		fullName = firstName + " " + lastName;
 
 		    	localStorage.setItem("userId", userId);
 		    	localStorage.setItem("userToken", token);
+		    	localStorage.setItem("name", fullName);
+		    	
 		    	this.setState({redirect: true});
 		    })
 		    .catch(err => {
