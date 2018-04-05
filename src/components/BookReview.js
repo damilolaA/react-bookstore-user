@@ -5,10 +5,14 @@ const BookReview = (props) => {
 
 		let commentsArray = props.bookData.comments,
 			userName = localStorage.getItem('name'),
-			info = userName.split(" "),
+			info = "",
 			initials = "",
 			comments = [];
 		
+		if(userName) {
+			info = userName.split(" ");
+		}
+
 		for(var i = 0; i < info.length; i++) {
 			initials += info[i].substring(0, 1);
 		}
