@@ -3,7 +3,6 @@ import CommentForm from './CommentForm';
 
 const BookReview = (props) => {	
 
-
 		let commentsArray = props.bookData.comments,
 			userName = localStorage.getItem('name'),
 			info = userName.split(" "),
@@ -16,7 +15,6 @@ const BookReview = (props) => {
 
 		if(commentsArray) {
 			commentsArray.forEach(comment => {
-				console.log(comment);
 				comments.push(
 					<li key={comment._id} className="review">
 			          <div className="avatar-def user-image">
