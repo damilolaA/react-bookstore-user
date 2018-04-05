@@ -9,7 +9,8 @@ class Form extends Component {
 		this.state = {
 			comment: {},
 			errors: {},
-			userId: ""
+			userId: "",
+			loading: false
 		}
 
 		this.handleSubmit = this.handleSubmit.bind(this);
