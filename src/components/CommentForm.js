@@ -27,12 +27,15 @@ class Form extends Component {
 		let comment = this.state.comment,
 			name = e.target.name;
 
-		let userId = localStorage.getItem('userId');
+		let userId = localStorage.getItem('userId'),
+			fullName = localStorage.getItem('fullName');
+
 		this.setState({userId: userId})
 
 		comment[name] = e.target.value;
 		comment['bookId'] = this.props.bookId;
 		comment['userId'] = userId;
+		comment['fullName'] = fullName;
 
 		this.setState({comment: comment});
 	}
