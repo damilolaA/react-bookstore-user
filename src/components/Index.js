@@ -4,6 +4,7 @@ import MainSection from './MainSection';
 import BookPreview from './BookPreview';
 import UserRegistration from './UserRegistration';
 import UserLogin from './UserLogin';
+import BooksCatalogue from './BooksCatalogue';
 
 const Index = () => {
 
@@ -15,6 +16,7 @@ const Index = () => {
 				<Route path="/bookpreview/:id" component={BookPreview} />
 				<Route path="/register" component={UserRegistration} />
 				<Route path="/login" component={UserLogin} />
+				<Route path="/catalogue" component={BooksCatalogue} />
 			</Switch>
 		</div>
 	</BrowserRouter>
