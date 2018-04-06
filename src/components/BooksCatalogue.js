@@ -32,7 +32,7 @@ class Catalogue extends Component {
 		if(this.state.categories) {
 			categories = this.state.categories;
 		}
-		
+
 		return (
 			<div>
 				<Header />
@@ -44,10 +44,6 @@ class Catalogue extends Component {
 				</div>
 				<div className="main">
 					<TrendingBooks />
-					<div className="actions">
-				        <button className="def-button previous">Previous</button>
-				        <button className="def-button next">Next</button>
-				    </div>
 				    <RecentlyViewed />
 				</div>
 				<Footer />
