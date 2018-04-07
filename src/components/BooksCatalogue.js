@@ -34,7 +34,7 @@ class Catalogue extends Component {
 		}
 
 		return (
-			<div>
+			<div id="catalogue">
 				<Header />
 				<div className="side-bar">
 				    <div className="categories">

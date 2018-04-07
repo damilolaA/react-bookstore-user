@@ -83,7 +83,7 @@ class Form extends Component {
 
  	render() {
  		if(this.state.loading) {
- 			return <Redirect to='/' />
+ 			return <Redirect to='/catalogue' />
  		}
 		return (
 			<div className="add-comment">
