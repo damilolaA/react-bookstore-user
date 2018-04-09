@@ -28,7 +28,7 @@ class Trending extends Component {
 		
 		return (
 			<div>
-				<BookList header="Trending" trendingBooks={this.state.trending}/>
+				<BookList header={this.props.header} trendingBooks={this.state.trending}/>
 			</div>
 		)
 	}

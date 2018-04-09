@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const CategoryList = (props) => {
 
@@ -8,7 +9,7 @@ const CategoryList = (props) => {
 	if(categories) {
 		categories.forEach(category => {
 			categoryItems.push(
-				<a href="" key={category._id}><li className="category">{category.categoryName}</li></a>
+				<Link to={`/categoryItem/${category._id}`} key={category._id}><li className="category">{category.categoryName}</li></Link>
 			)
 		})
 	}

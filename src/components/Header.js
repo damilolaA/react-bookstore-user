@@ -17,7 +17,7 @@ const Header = () => {
 		          <div className="cart-item-indicator">
 		            <p>12</p>
 		          </div>
-		          <Link to="cart.html">Cart</Link>
+		          <Link to="/cart">Cart</Link>
 		        </li>
 		      </ul>
 		      <form className="search-brainfood">

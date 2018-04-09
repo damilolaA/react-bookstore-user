@@ -11,7 +11,7 @@ const MainSection = () => {
 		<div className="main">
 			<Header />
 			<TopSelling />
-			<TrendingBooks />
+			<TrendingBooks header='Trending'/>
 			<RecentlyViewed />
 			<Footer />
 		</div>
