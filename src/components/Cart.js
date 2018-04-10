@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
+import CartItems from './CartItems';
 
 const Cart = () => {
 
@@ -19,9 +20,9 @@ const Cart = () => {
 				      <th><h3>Remove</h3></th>
 				    </tr>
 				  </thead>
-				  <tbody>
-				    
-				   </tbody>
+				  
+				    <CartItems />
+				   
 				</table>
 			</div>
 			<Footer />

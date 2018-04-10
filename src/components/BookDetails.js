@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom';
 import axios from 'axios';
 
 class TopSellingDetails extends Component {
@@ -7,7 +8,8 @@ class TopSellingDetails extends Component {
 		super(props)
 		this.state = {
 			cartData: {},
-			errors: {}
+			errors: {},
+			loading: false
 		}
 
 		this.handleForm = this.handleForm.bind(this);
@@ -70,7 +72,9 @@ class TopSellingDetails extends Component {
 			        data: cartData
 			    })
 			    .then(response => {
-			    	console.log(response);
+			    	this.setState({
+			    		loading: true
+			    	})
 			    })
 			    .catch(err => {
 			    	console.log(err);
@@ -84,6 +88,12 @@ class TopSellingDetails extends Component {
 	}
 
 	render() {
+
+		console.log(this.state.loading);
+		if(this.state.loading) {
+			return <Redirect to="/cart" />
+		}
+
 		const style = {
 			backgroundImage: 'url('+this.props.details.imagePath+')',
 			backgroundSize: 'contain',
