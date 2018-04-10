@@ -13,7 +13,6 @@ class CartItems extends Component {
 	componentDidMount() {
 		axios.get('https://bookstoreappapi.herokuapp.com/api/v1/cart')
 			.then(response => {
-				console.log(response);
 				this.setState({
 					cartItems: response.data
 				})

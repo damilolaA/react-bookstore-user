@@ -47,8 +47,6 @@ class TopSellingDetails extends Component {
 			cartData = this.state.cartData,
 			quantity = cartData['quantity'];
 
-		console.log(quantity);
-
 		if(!this.isNormalInteger(quantity)) {
 			errors['quantity'] = "Please select a quantity";
 			isValid = false;
