@@ -87,7 +87,6 @@ class TopSellingDetails extends Component {
 
 	render() {
 
-		console.log(this.state.loading);
 		if(this.state.loading) {
 			return <Redirect to="/cart" />
 		}

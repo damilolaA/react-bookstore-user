@@ -16,7 +16,6 @@ const BookReview = (props) => {
 					let name = username.split(" ");
 
 					for(var i = 0; i < name.length; i++) {
-						console.log(initials);
 						initials += name[i].substring(0, 1);
 					}
 				}

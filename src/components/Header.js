@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
 
+	let cartLength = localStorage.getItem('cartLength');
+
 	return (
 		<div>
 			<div className="top-bar">
@@ -15,7 +17,7 @@ const Header = () => {
 		        <li className="top-nav-listItem register"><Link to="/register">Register</Link></li>
 		        <li className="top-nav-listItem cart">
 		          <div className="cart-item-indicator">
-		            <p>12</p>
+		            <p>{cartLength}</p>
 		          </div>
 		          <Link to="/cart">Cart</Link>
 		        </li>

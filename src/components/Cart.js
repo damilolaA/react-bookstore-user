@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
 import CartItems from './CartItems';
@@ -24,6 +25,9 @@ const Cart = () => {
 				    <CartItems />
 				   
 				</table>
+				<div className="cart-table-actions">
+			      <Link to="/checkout"><button className="def-button checkout">Checkout</button></Link>
+			    </div>
 			</div>
 			<Footer />
 		</div>

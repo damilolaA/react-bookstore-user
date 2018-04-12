@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import Header from './Header';
+import Footer from './Footer';
 import BookList from './BookList';
+import SideBar from './SideBar';
 
 class CategoryItems extends Component {
 
@@ -12,10 +15,10 @@ class CategoryItems extends Component {
 	}
 
 	componentDidMount() {
-		console.log(this.props);
+
 		if(this.props.match.params.id) {
 			let categoryId = this.props.match.params.id;
-			console.log(categoryId);
+
 			axios.get(`https://bookstoreappapi.herokuapp.com/api/v1/books/categories/${categoryId}`)
 				.then(response => {
 					this.setState({
@@ -31,8 +34,11 @@ class CategoryItems extends Component {
 	render() {
 
 		return(
-			<div>
+			<div id="catalogue">
+				<Header />
+				<SideBar />
 				<BookList header={""} trendingBooks={this.state.categories}/>
+				<Footer />
 			</div>
 		);
 	}

@@ -56,7 +56,15 @@ class CartItems extends Component {
 	    };
 
 		if(this.state.cartItems) {
+			let cartLength = this.state.cartItems.length,
+				totalPrice = 0;
+
+			localStorage.setItem('cartLength', cartLength);
+
 			this.state.cartItems.forEach((item, i) => {
+
+				totalPrice = +item.total + +totalPrice;
+
 				itemsList.push(
 					<tr key={i}>
 						<td><div className="book-cover" 
@@ -67,9 +75,9 @@ class CartItems extends Component {
 					 				backgroundRepeat: 'no-repeat'
 					 			}}></div>
 						</td>
-				          <td><p className="book-price">{item.price}</p></td>
+				          <td><p className="book-price">${item.price}</p></td>
 				          <td><p className="quantity">{item.quantity}</p></td>
-				          <td><p className="total">{item.total}</p></td>
+				          <td><p className="total">${item.total}</p></td>
 				          <td>
 				            <form className="update">
 				              <input type="number" className="text-field qty" />
@@ -83,6 +91,7 @@ class CartItems extends Component {
 			        </tr>
 				)
 			})
+			localStorage.setItem('totalPrice', totalPrice);
 		}
 
 		return(
