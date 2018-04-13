@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import BookList from './BookList';
+import Loader from './Loader';
 
 class Trending extends Component {
 
 	constructor() {
 		super()
 		this.state = {
-			trending: ""
+			trending: "",
+			loading: true
 		}
 	}
 
@@ -16,7 +18,8 @@ class Trending extends Component {
 			.then(response => {
 				let books = response.data
 				this.setState({
-					trending: books
+					trending: books,
+					loading: false
 				})
 			})
 			.catch(err => {
@@ -26,6 +29,10 @@ class Trending extends Component {
 
 	render() {
 		
+		if(this.state.loading) {
+			return <Loader />;
+		}
+
 		return (
 			<div>
 				<BookList header={this.props.header} trendingBooks={this.state.trending}/>

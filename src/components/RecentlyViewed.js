@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import BookList from './BookList';
+import Loader from './Loader';
 
 class RecentlyViewed extends Component {
 
 	constructor() {
 		super()
 		this.state = {
-			recentlyViewed: ""
+			recentlyViewed: "",
+			loading: true
 		}
 	}
 
@@ -15,7 +17,8 @@ class RecentlyViewed extends Component {
 		axios.get('https://bookstoreappapi.herokuapp.com/api/v1/books/recentlyViewed')
 			.then(response => {
 				this.setState({
-					recentlyViewed: response.data
+					recentlyViewed: response.data,
+					loading: false
 				})
 			})
 			.catch(err => {
@@ -24,9 +27,14 @@ class RecentlyViewed extends Component {
 	}
 
 	render() {
+
+		if(this.state.loading) {
+			return <Loader />
+		}
+
 		return (
 			<div>
-				<BookList header="Recently Viewed" trendingBooks={this.state.recentlyViewed}/>
+			   <BookList header="Recently Viewed" trendingBooks={this.state.recentlyViewed}/> 
 			</div>
 		)
 	}
