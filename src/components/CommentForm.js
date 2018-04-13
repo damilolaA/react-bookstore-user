@@ -85,6 +85,7 @@ class Form extends Component {
  		if(this.state.loading) {
  			return <Redirect to='/catalogue' />
  		}
+ 		
 		return (
 			<div className="add-comment">
 		        <h3 className="header">Add your comment</h3>
