@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const TrendingBooksList = (props) => {
 
 	let books = [];
-
+	
 	if(props.trendingBooks) {
 		props.trendingBooks.forEach(book => {
 			books.push(

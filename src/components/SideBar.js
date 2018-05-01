@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import CategoryList from './CategoryList';
+import CategoryLink from './CategoryLink';
 
 class SideBar extends Component {
-	constructor() {
-		super()
+	constructor(props) {
+		super(props)
 		this.state = {
 			categories: ""
 		}
@@ -20,19 +20,32 @@ class SideBar extends Component {
 			})
 	}
 
+	handleLinkClick(id, name) {
+		 this.props.handleLinkClick(id, name);
+		// console.log(id);
+	}
+
 	render() {
-		let categories = "";
+		let categories = "",
+			categoryItems = [];
 
 		if(this.state.categories) {
 			categories = this.state.categories;
+			categories.forEach(category => {
+				categoryItems.push(
+					<CategoryLink key={category._id} handleLinkClick={this.handleLinkClick.bind(this)} category={category} />
+				)
+			})
 		}
 
 		return(
 			<div className="side-bar">
-			    <div className="categories">
-			      <h3 className="header">Categories</h3>
-			      <CategoryList data={categories} />
-			    </div>
+			  <div className="categories">
+			    <h3 className="header">Categories</h3>
+			    <ul className="category-list">
+						{categoryItems}
+					</ul>
+			  </div>
 			</div>
 		);
 	}

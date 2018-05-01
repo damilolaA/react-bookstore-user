@@ -5,7 +5,6 @@ import BookPreview from './BookPreview';
 import UserRegistration from './UserRegistration';
 import UserLogin from './UserLogin';
 import BooksCatalogue from './BooksCatalogue';
-import CategoryItems from './CategoryItems';
 import Cart from './Cart';
 import CheckOut from './CheckOut';
 
@@ -20,7 +19,6 @@ const Index = () => {
 				<Route path="/register" component={UserRegistration} />
 				<Route path="/login" component={UserLogin} />
 				<Route path="/catalogue" component={BooksCatalogue} />
-				<Route path="/categoryItem/:id" component={CategoryItems}/>
 				<Route path="/cart" component={Cart} />
 				<Route path="/checkout" component={CheckOut} />
 			</Switch>
