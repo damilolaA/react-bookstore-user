@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+- node
+cache:
+  directories:
+  - node_modules
+script:
+- npm test
+- npm run build
+deploy:
+  provider: heroku
+  api_key:
+    secure: uDcn9K2AgFeNips/fTsrgj7mSKV+0WviGdi0CDgNTPaVAB0UgHoZMcPkhXyIM+2EzztsaRn4ezujODvp4YeCZASwQzFnlv9FZb65FTsgCg6Yv0ArbzMTlpT3LXWlFSeBvItwlBR8UP1QdkY/jtG89V4oLNTzuxHJykZ7N6hwFPxs9h467MQWd4NBEdEJ9+d0cAYzVaggk/hHRYN6uvT+Rug/TGpwXQ0uYP446OWLjjW3KmjlAi/xY+YzPg6vj3rgHpl2pxMVNlMPSS1RP44Ov/KAqNZdzwOCJJrC+updy+Je1MsJQGB6eYwK17ga/K4FxGOuAK6o/ZtfbX+CqVqUVKcYaBVulQx1L01eGpoS4ovCez5fh9kGjDRBF7EiZW1TIAxlKEQdowOds3q/ljcPX7vwzmPhmDRqlcw8huaL+yfP2gzLEkG7GWecYNShdJDZFXWPK0X1yPN8qSRPTGDTsHGHvCc+p/AcrAWjcORME8UTmdsABdyyQUODTAk3WsFJQ/BnQSxpbnXPmcsPF5Qg2fsdB8WYUX+P9VnWQCovdCRL2Dm1w/ec5BnVe9FXGAVaIh7F+YRGUqwkZmXa3OYj0HOUjI2hPRFhN0U7L+nZEkTgmGWe+HOCDrQ+tAS16h0s2aDVSa2RWQSnQMwTAyjgw5R38XRBtaHqNEMwBUIGk4c=
+  app: react-bookstore-user
+  on:
+    repo: damilolaA/react-bookstore-user
